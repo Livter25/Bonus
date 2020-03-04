@@ -1,0 +1,84 @@
+=t_margin($size)
+    margin-top: $size*2
+=pad($size)
+    padding: $size
+=font($size)
+    font-size: $size*2
+=b_margin($size)
+    margin-bottom: $size*2
+=line($size)
+    line-height: $size*2
+
+
+$color: #131313
+$bc_color: rgba(255, 255, 255, 0.9)
+
+.footer
+    +t_margin(30px)
+    color: lighten($color,32%)
+    background-color: $color
+    +pad(59px 0)
+    &-policy-link
+        +font(6px)
+    p
+        +b_margin(7px)
+    a
+        color: lighten($color,32%)
+        text-decoration: none
+    a:hover
+        color: lighten($color,100%)
+    small
+        display: block
+        +t_margin(28px)
+        +line(8px)
+        +font(5px)
+        max-width: 80%
+    ul
+        +pad(0)
+        list-style: none
+        li
+            +line(16px)
+    &-contacts, &-social-link
+        text-align: right
+    &-contacts_phone
+        font-weight: 400
+        +font(10px)
+        color: #009adf
+    &-social-links
+        li
+            display: inline-block
+    &-social-links
+        li
+            a
+                display: inline-block
+                width: 42px
+                height: 42px
+                background-color: $bc_color
+                text-align: center
+                border-radius: 50%
+                +line(21px)
+                margin-left: 10px
+                -webkit-transition: all 0.2s
+                transition: all 0.2s
+    &-social-links
+        li
+            a:hover
+                background-color: $bc_color
+                color: $color
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
